@@ -9,6 +9,7 @@ from pydantic import BaseModel
 
 load_dotenv()
 
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
