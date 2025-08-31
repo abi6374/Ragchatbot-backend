@@ -3,12 +3,15 @@ import requests
 import google.generativeai as genai
 from groq import Groq
 from langchain.schema import Document
+from dotenv import load_dotenv
 
 # Configure Gemini
-genai.configure(api_key="AIzaSyBsFdZIzGNlvzd-caz-_hANbBtX2JfPOOQ")
+load_dotenv()
+
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Initialize Groq
-groq_client = Groq(api_key="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")
+groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 class RAGEngine:
     def __init__(self, store):
