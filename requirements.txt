@@ -5,9 +5,8 @@ sentence-transformers
 faiss-cpu
 groq
 google-generativeai
-python-dotenv
 langchain
 pypdf 
 langchain-community
 langchain-core
-dotenv
+python-dotenv
